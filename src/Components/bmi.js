@@ -9,7 +9,7 @@ const BmiCalculator = () => {
   const [resultBg, setResultBg] = useState({
     background: 'linear-gradient(to bottom right, #4FD24D, #4CA456)',
   });
-
+/*function to calculate bmi */
   const calculateBmi = () => {
     const h = height / 100;
     const w = weight;
@@ -31,25 +31,25 @@ const BmiCalculator = () => {
       setResultBg({ backgroundColor: 'red' });
     }
   };
-
+/*on basic of bmi diets are provided */
   const renderDietButtons = () => {
     let dietUrl = '';
     let personalDietUrl = '';
     switch (bmiCategory) {
       case 'Underweight':
-        dietUrl = 'https://www.vbafitness.com/wp-content/uploads/2022/06/Screen-Shot-2022-06-01-at-4.46.24-PM-1.png';
+        dietUrl = '/wv8';
         personalDietUrl = 'https://www.example.com/underweight-personal-diet';
         break;
       case 'Normal':
-        dietUrl = 'https://miro.medium.com/v2/resize:fit:1094/0*IRjI-XT81v1TmAXU.png';
+        dietUrl = '/wv8';
         personalDietUrl = 'https://www.example.com/normal-personal-diet';
         break;
       case 'Overweight':
-        dietUrl = 'https://miro.medium.com/v2/resize:fit:1094/0*IRjI-XT81v1TmAXU.png';
+        dietUrl = 'ov8';
         personalDietUrl = 'https://www.example.com/overweight-personal-diet';
         break;
       case 'Obese':
-        dietUrl = 'https://www.olivaclinic.com/wp-content/uploads/2024/05/1000-Calorie-Diet-Plan.jpg';
+        dietUrl = 'ov8';
         personalDietUrl = 'https://www.example.com/obese-personal-diet';
         break;
     }
@@ -59,9 +59,9 @@ const BmiCalculator = () => {
         <a href={dietUrl} target="_blank" rel="noopener noreferrer" className="diet-button">
           Basic Diet
         </a>
-        <a href={personalDietUrl} target="_blank" rel="noopener noreferrer" className="diet-button">
+        {/*<a href={personalDietUrl} target="_blank" rel="noopener noreferrer" className="diet-button">
           Personal Diet
-        </a>
+        </a>*/}
       </div>
     );
   };
@@ -69,15 +69,13 @@ const BmiCalculator = () => {
   return (
     <div className="bmi-page-container">
       <div className="background-video-container">
-        <video autoPlay muted loop>
-          <source src="" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+       
       </div>
       <div className="bmi-calculator-container">
         <a href="clhome" className="home-button">
           Home
         </a>
+        {/*result*/}
         <div className="bmi-calculator">
           <div className="result">
             <div className="result-text" style={resultBg}>

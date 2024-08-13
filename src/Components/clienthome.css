@@ -1,3 +1,4 @@
+/* General Resets */
 html, body {
   margin: 0;
 }
@@ -5,10 +6,12 @@ html, body {
 h1, h2, a {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  font-weight: 300; /* Make font lighter */
 }
 
 p {
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300; /* Make font lighter */
 }
 
 .container {
@@ -36,12 +39,14 @@ p {
   color: #fff;
   margin: 0;
   font-size: 150px;
+  font-weight: 500; /* Make font lighter */
 }
 
 .main p {
   color: #fff;
   margin: 0 0 20px 0;
   font-size: 18px;
+  font-weight: 300; /* Make font lighter */
 }
 
 .main .btn {
@@ -70,6 +75,7 @@ p {
   color: #ffa800;
   font-size: 20px;
   margin-bottom: 10px;
+  font-weight: 300; /* Make font lighter */
 }
 
 .clearfix {
@@ -81,6 +87,7 @@ p {
   margin-bottom: 20px;
   line-height: 20px;
   font-size: 12px;
+  font-weight: 300; /* Make font lighter */
 }
 
 .supporting .btn {
@@ -113,6 +120,7 @@ p {
   font-size: 40px;
   margin: 0;
   padding: 50px 0 0;
+  font-weight: 300; /* Make font lighter */
 }
 
 /* Footer */
@@ -136,12 +144,14 @@ p {
   font-size: 40px;
   margin: 0 0 20px 0;
   padding: 50px 0 0;
+  font-weight: 300; /* Make font lighter */
 }
 
 .footer p {
   color: #fff;
   margin: 0 0 20px 0;
   font-size: 18px;
+  font-weight: 300; /* Make font lighter */
 }
 
 .footer .btn {
@@ -179,10 +189,12 @@ a.btn:hover {
     font-size: 60px;
   }
 }
+
 /* Navigation Bar */
 .navbar {
   background-color: #000000;
-  padding: 15px;
+  padding-left: 3px;
+  padding-right: 10px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -194,7 +206,8 @@ a.btn:hover {
 
 .navbar .logo {
   margin-right: auto;
-  width: 50px; /* Adjust size as needed */
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
 }
 
 .navbar ul {
@@ -214,6 +227,7 @@ a.btn:hover {
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
+  font-weight: 300; /* Make font lighter */
 }
 
 .navbar ul li a:hover {
@@ -221,8 +235,3 @@ a.btn:hover {
 }
 
 /* Adjust main content to account for the navbar */
-
-
-
-
-

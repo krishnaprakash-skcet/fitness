@@ -1,0 +1,61 @@
+/* src/PhotoGallery.css */
+
+body {
+    font-family: 'Arial', sans-serif;/*css for font*/
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+.gallery-container {
+    position: relative;
+    padding: 50px;
+}
+/*for home button*/
+.hombutton {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: #ffa800;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+/*card to display images*/
+.card {
+    background-color: #cccaca;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+.card:hover {
+    transform: translateY(-10px);
+}

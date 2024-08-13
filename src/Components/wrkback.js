@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: url('https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNoZXN0JTIwd29ya291dHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+    background-color: black;
     background-size: cover;
     color: white;
     font-family: 'Arial', sans-serif;
@@ -50,7 +50,7 @@ const TargetArea = styled.p`
 const Video = styled.div`
   background-color: #333;
   width: 100%;
-  padding-top: 177.78%; /* 9:16 Aspect Ratio */
+  padding-top: 100.78%; /* 9:16 Aspect Ratio */
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -67,60 +67,80 @@ const Video = styled.div`
   }
 `;
 
+const BackButton = styled.a`
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ffa800; /* Yellow background */
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+
+
+`;
+/*various youtube links are used  */
 const workouts = [
   {
     title: 'Pull-Ups',
     target: 'Upper Back',
-    video: 'https://youtube.com/embed/ZPG8OsHKXLw?si=UwJRsqIOOMwLfzt7',
+    video: 'https://youtube.com/embed/ZPG8OsHKXLw',
   },
   {
     title: 'Lat Pulldowns',
     target: 'Lats',
-    video: 'https://youtube.com/embed/hnSqbBk15tw?si=YJfOugcVJ29Ear2g',
+    video: 'https://youtube.com/embed/hnSqbBk15tw',
   },
   {
     title: 'Bent Over Rows',
     target: 'Middle Back',
-    video: 'https://youtube.com/embed/Nqh7q3zDCoQ?si=vJ5XySRb6Mfv8C-s',
+    video: 'https://youtube.com/embed/Nqh7q3zDCoQ',
   },
   {
     title: 'Seated Cable Rows',
     target: 'Middle Back',
-    video: 'https://youtube.com/embed/G18ysBYu5Mw?si=K-zP3JCrXjTVNBlX',
+    video: 'https://youtube.com/embed/G18ysBYu5Mw',
   },
   {
     title: 'Deadlifts',
     target: 'Lower Back',
-    video: 'https://youtube.com/embed/8np3vKDBJfc?si=1bl6c-NuM0xBqcyS',
+    video: 'https://youtube.com/embed/8np3vKDBJfc',
   },
   {
     title: 'Face Pulls',
     target: 'Upper Back and Rear Delts',
-    video: 'https://youtube.com/embed/DVxfKB0BnlY?si=D09RMIWC7a1Wdjvg',
+    video: 'https://youtube.com/embed/DVxfKB0BnlY',
   },
 ];
 
-const Wrkback = () => (
-  <>
-    <GlobalStyle />
-    <Container>
-      <Header>Back Workouts</Header>
-      {workouts.map((workout, index) => (
-        <WorkoutContainer key={index}>
-          <WorkoutTitle>{workout.title}</WorkoutTitle>
-          <TargetArea>Targets: {workout.target}</TargetArea>
-          <Video>
-            <iframe 
-              src={workout.video} 
-              title={workout.title} 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen 
-            />
-          </Video>
-        </WorkoutContainer>
-      ))}
-    </Container>
-  </>
-);
+const Wrkback = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <BackButton href="/wrkout">Back</BackButton> {/* Replace "/" with the desired URL */}
+      <Container>
+        <Header>Back Workouts</Header>
+        {workouts.map((workout, index) => (
+          <WorkoutContainer key={index}>
+            <WorkoutTitle>{workout.title}</WorkoutTitle>
+            <TargetArea>Targets: {workout.target}</TargetArea>
+            <Video>
+              <iframe 
+                src={workout.video} 
+                title={workout.title} 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen 
+                frameBorder="0"
+              />
+            </Video>
+          </WorkoutContainer>
+        ))}
+      </Container>
+    </>
+  );
+};
 
 export default Wrkback;

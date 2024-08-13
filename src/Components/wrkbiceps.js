@@ -67,60 +67,51 @@ const Video = styled.div`
 `;
 
 const BackButton = styled.a`
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #ffa800; /* Yellow background */
+  background-color: #ffa800;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
+ 
+  text-align: center;
 
-
+    
+  }
 `;
+/*Various youtube links are used */
 
 const workouts = [
   {
-    title: 'Overhead Press',
-    target: 'Shoulders',
-    video: 'https://youtube.com/embed/OLePvpxQEGk',
+    title: 'Bicep Curl',
+    target: 'Biceps',
+    video: 'https://youtube.com/embed/N6paU6TGFWU?si=HmiL5ztUSEnmv7WF',
   },
   {
-    title: 'Lateral Raises',
-    target: 'Side Delts',
-    video: 'https://youtube.com/embed/JIhbYYA1Q90',
+    title: 'Hammer Curl',
+    target: 'Biceps and Forearms',
+    video: 'https://youtube.com/embed/OPhgvwKBOwI?si=gE_D-oC1D95xi6dg',
   },
   {
-    title: 'Front Raises',
-    target: 'Front Delts',
-    video: 'https://youtube.com/embed/NdQE5Fhfqn4',
+    title: 'Concentration Curl',
+    target: 'Biceps',
+    video: 'https://youtube.com/embed/cHxRJdSVIkA?si=sINLdkHygBK8JrSo',
   },
   {
-    title: 'Rear Delt Flyes',
-    target: 'Rear Delts',
-    video: 'https://youtube.com/embed/P5CXx_jgTDE',
-  },
-  {
-    title: 'Arnold Press',
-    target: 'Shoulders',
-    video: 'https://youtube.com/embed/ppVR9oF32K0',
-  },
-  {
-    title: 'Upright Rows',
-    target: 'Shoulders and Traps',
-    video: 'https://youtube.com/embed/AWsGWt-VMl8',
+    title: 'Preacher Curl',
+    target: 'Biceps',
+    video: 'https://youtube.com/embed/Htw-s61mOw0?si=RmnJSG_TC0wSqLFT',
   },
 ];
-/*Various youtube links are used */
-const Wrksholder = () => (
+
+const Wrkbiceps = () => (
   <>
     <GlobalStyle />
-    <BackButton href="/wrkout">Back</BackButton> {/* Replace "/" with the desired URL */}
     <Container>
-      <Header>Shoulder Workouts</Header>
+      <BackButton href="/wrkout">Back</BackButton>
+      <Header>Bicep Workouts</Header>
       {workouts.map((workout, index) => (
         <WorkoutContainer key={index}>
           <WorkoutTitle>{workout.title}</WorkoutTitle>
@@ -129,9 +120,8 @@ const Wrksholder = () => (
             <iframe 
               src={workout.video} 
               title={workout.title} 
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen 
-              frameBorder="0"
             />
           </Video>
         </WorkoutContainer>
@@ -140,4 +130,4 @@ const Wrksholder = () => (
   </>
 );
 
-export default Wrksholder;
+export default Wrkbiceps;

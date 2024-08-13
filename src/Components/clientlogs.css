@@ -189,7 +189,7 @@ input::placeholder {
 }
 
 .user_options-forms .forms_field:not(:last-of-type) {
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 .user_options-forms .forms_field-input {

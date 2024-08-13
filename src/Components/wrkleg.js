@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: black;
+    background-size: cover;
     color: white;
     font-family: 'Arial', sans-serif;
   }
@@ -79,48 +80,43 @@ const BackButton = styled.a`
   cursor: pointer;
   z-index: 1000;
 
-
+ 
 `;
 
 const workouts = [
   {
-    title: 'Overhead Press',
-    target: 'Shoulders',
-    video: 'https://youtube.com/embed/OLePvpxQEGk',
+    title: 'Squats',
+    target: 'Quads, Glutes',
+    video: 'https://youtube.com/embed/MLoZuAkIyZI?si=XmjARxu1HZkWCFnC',
   },
   {
-    title: 'Lateral Raises',
-    target: 'Side Delts',
-    video: 'https://youtube.com/embed/JIhbYYA1Q90',
+    title: 'Lunges',
+    target: 'Quads, Glutes, Hamstrings',
+    video: 'https://youtube.com/embed/TwEH620Pn6A?si=BAUVWKI7hQd-f9Fe',
   },
   {
-    title: 'Front Raises',
-    target: 'Front Delts',
-    video: 'https://youtube.com/embed/NdQE5Fhfqn4',
+    title: 'Leg Press',
+    target: 'Quads, Glutes, Hamstrings',
+    video: 'https://youtube.com/embed/ZOHxJ8dhrxc?si=GPdDXsTgxG0a-elN',
   },
   {
-    title: 'Rear Delt Flyes',
-    target: 'Rear Delts',
-    video: 'https://youtube.com/embed/P5CXx_jgTDE',
+    title: 'Deadlifts',
+    target: 'Hamstrings, Glutes, Lower Back',
+    video: 'https://youtube.com/embed/vfKwjT5-86k?si=U-JJ3lEKEm4kU1id',
   },
   {
-    title: 'Arnold Press',
-    target: 'Shoulders',
-    video: 'https://youtube.com/embed/ppVR9oF32K0',
-  },
-  {
-    title: 'Upright Rows',
-    target: 'Shoulders and Traps',
-    video: 'https://youtube.com/embed/AWsGWt-VMl8',
+    title: 'Calf Raises',
+    target: 'Calves',
+    video: 'https://youtube.com/embed/xK6DoHBXTdw?si=ZvkhAfyi18ePDSDX',
   },
 ];
 /*Various youtube links are used */
-const Wrksholder = () => (
+const Wrklegs = () => (
   <>
     <GlobalStyle />
     <BackButton href="/wrkout">Back</BackButton> {/* Replace "/" with the desired URL */}
     <Container>
-      <Header>Shoulder Workouts</Header>
+      <Header>Leg Workouts</Header>
       {workouts.map((workout, index) => (
         <WorkoutContainer key={index}>
           <WorkoutTitle>{workout.title}</WorkoutTitle>
@@ -129,9 +125,8 @@ const Wrksholder = () => (
             <iframe 
               src={workout.video} 
               title={workout.title} 
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen 
-              frameBorder="0"
             />
           </Video>
         </WorkoutContainer>
@@ -140,4 +135,4 @@ const Wrksholder = () => (
   </>
 );
 
-export default Wrksholder;
+export default Wrklegs;

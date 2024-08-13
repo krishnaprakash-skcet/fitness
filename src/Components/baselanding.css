@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+/*used for button hover*/
 :root{
     --left-bg-color: rgba(87, 84, 236, 0.5);
     --right-bg-color: #ffa800;
@@ -22,7 +22,7 @@
     margin: 0;
 }
 
-
+/*button css*/
 .btan{
     position: absolute;
     left: 50%;
@@ -40,15 +40,17 @@
     font-weight: bold;
     text-transform: uppercase;
 }
-
+/*hover effects on button*/
 .split.left .btan:hover{
     background-color: var(--left-btn-hover-color);
     border-color: var(--left-btn-hover-color);
+    color: black;
 }
 
 .split.right .btan:hover{
     background-color: var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color);
+    color: black;
 }
 
 .contaier1{
@@ -64,10 +66,10 @@
     height: 100%;
     overflow: hidden;
 }
-
+/*images and split*/
 .split.left {
     left: 0;
-    background: url('https://cdn.shopify.com/s/files/1/0630/1794/3286/files/ThePureBodybuildingProgram_4308fbb5-6e5a-4438-93d7-ee5690304e9d.jpg?v=1701208456');    
+    background: url('https://w0.peakpx.com/wallpaper/928/286/HD-wallpaper-gym-lover-motivation-lover-gym-fitness.jpg');    
     background-size: cover;
 }
 

@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: black;
+    background-size: cover;
     color: white;
     font-family: 'Arial', sans-serif;
   }
@@ -78,49 +79,37 @@ const BackButton = styled.a`
   border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
-
-
 `;
 
 const workouts = [
   {
-    title: 'Overhead Press',
-    target: 'Shoulders',
-    video: 'https://youtube.com/embed/OLePvpxQEGk',
+    title: 'Dips',
+    target: 'Triceps',
+    video: 'https://youtube.com/embed/ci5tcFgIntI?si=s9M3RPEqD-Pj34Ut',
   },
   {
-    title: 'Lateral Raises',
-    target: 'Side Delts',
-    video: 'https://youtube.com/embed/JIhbYYA1Q90',
+    title: 'Skull Crushers',
+    target: 'Triceps',
+    video: 'https://youtube.com/embed/gTrlbuuMufQ?si=pNuUTzIsj-vlX8Wr',
   },
   {
-    title: 'Front Raises',
-    target: 'Front Delts',
-    video: 'https://youtube.com/embed/NdQE5Fhfqn4',
+    title: 'Overhead Tricep Extension',
+    target: 'Triceps',
+    video: 'https://youtube.com/embed/8FNGBJUHfsA?si=O6h9xCmXMgWPC46H',
   },
   {
-    title: 'Rear Delt Flyes',
-    target: 'Rear Delts',
-    video: 'https://youtube.com/embed/P5CXx_jgTDE',
-  },
-  {
-    title: 'Arnold Press',
-    target: 'Shoulders',
-    video: 'https://youtube.com/embed/ppVR9oF32K0',
-  },
-  {
-    title: 'Upright Rows',
-    target: 'Shoulders and Traps',
-    video: 'https://youtube.com/embed/AWsGWt-VMl8',
+    title: 'Tricep Pushdown',
+    target: 'Triceps',
+    video: 'https://youtube.com/embed/sAZIzp37JcE?si=FcnWAV7c6-Eo_Que',
   },
 ];
 /*Various youtube links are used */
-const Wrksholder = () => (
+const Wrktriceps = () => (
   <>
     <GlobalStyle />
     <BackButton href="/wrkout">Back</BackButton> {/* Replace "/" with the desired URL */}
     <Container>
-      <Header>Shoulder Workouts</Header>
+      <Header>Tricep Workouts</Header>
       {workouts.map((workout, index) => (
         <WorkoutContainer key={index}>
           <WorkoutTitle>{workout.title}</WorkoutTitle>
@@ -129,9 +118,8 @@ const Wrksholder = () => (
             <iframe 
               src={workout.video} 
               title={workout.title} 
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen 
-              frameBorder="0"
             />
           </Video>
         </WorkoutContainer>
@@ -140,4 +128,4 @@ const Wrksholder = () => (
   </>
 );
 
-export default Wrksholder;
+export default Wrktriceps;

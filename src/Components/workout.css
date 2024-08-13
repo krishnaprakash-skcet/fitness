@@ -43,8 +43,8 @@
   display: inline-block;
   overflow: hidden;
   margin: 20px; /* Adjust margin for spacing between cards */
-  min-width: 300px; /* Increase min-width for larger images */
-  max-width: 400px; /* Increase max-width for larger images */
+  min-width: 350px; /* Increase min-width for larger images */
+  max-width: 350px; /* Increase max-width for larger images */
   width: 350px; /* Fixed width to keep images aligned in a row */
   color: #ffffff;
   font-size: 16px;
@@ -76,8 +76,8 @@
 
 .snip1584 img {
   vertical-align: top;
-  width: 300px; /* Adjust width for larger images */
-  height: 300px; /* Maintain aspect ratio */
+  width: 250px; /* Adjust width for larger images */
+  height: 250px; /* Maintain aspect ratio */
   backface-visibility: hidden;
   transition: transform 0.3s ease; /* Add transition for scaling effect */
 }
@@ -180,4 +180,23 @@
   height: 100%;
   object-fit: cover; /* Cover the entire background */
   z-index: 1; /* Ensure the video is behind the content */
+}
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: yellow; /* Background color yellow */
+  color: black; /* Text color black */
+  border: 2px solid black; /* Border color black */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  z-index: 3; /* Ensure button is above other elements */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.home-button:hover {
+  background-color: black; /* Change background to black on hover */
+  color: white; /* Change text to white on hover */
 }

@@ -1,0 +1,135 @@
+/* General Page Styling */
+.premium-plans-container {
+    background-color: #000000; /* Dark gray background similar to the thome page */
+    color: #ffdd00; /* Yellow text */
+    padding: 20px;
+    font-family: 'Oswald', sans-serif; /* Font style for headers */
+  }
+  
+  h1, h2 {
+    color: #ffa800; /* Yellow text for headers */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  /* Form Container Styling */
+  .form-container {
+    background-color: #333; /* Slightly lighter dark background for the form section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+  }
+  
+  .ppt{
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #444; /* Dark border for input fields */
+    background-color: #222; /* Slightly lighter background for input fields */
+    color: #ffffff; /* Yellow text for input fields */
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  /* Plans List Styling */
+  .plans-list-container {
+    background-color: #333; /* Slightly lighter dark background for the plans list section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #444; /* Dark border for table cells */
+    color: #ffffff; /* Yellow text for table content */
+  }
+  
+  table th {
+    background-color: #111; /* Darker background for table headers */
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  table td {
+    background-color: #222; /* Slightly lighter background for table cells */
+  }
+  
+  /* Action Buttons Styling */
+  button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button {
+    background-color: #ffa800; /* Yellow background for edit button */
+    color: #000; /* Black text */
+  }
+  
+  .delete-button {
+    background-color: #c8102e; /* Red background for delete button */
+    color: #fff; /* White text */
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Utility Classes */
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .mt-30 {
+    margin-top: 30px;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  /* Back Button Styling */
+  .back-button {
+    background-color: #ffa800; /* Yellow background for back button */
+    color: #000; /* Black text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure proper spacing */
+    transition: background-color 0.3s ease;
+  }
+  .og1{
+    background-color: #fff;
+  }
+  
+  
+  

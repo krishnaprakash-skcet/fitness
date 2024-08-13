@@ -9,10 +9,15 @@ import Wrkback from '../Components/wrkback';
 import Wrksholder from '../Components/wrksholder';
 import Clhome from '../Components/clienthome';
 import ProfileCard from '../Components/trainer';
-import Tlogs from '../Components/Tlogin/trainerlogs';
-import UserManagement from '../Components/Trainer  page/Tbase';
-import DietPlanUpload from '../Components/Trainer  page/updiet';
 import ContactForm from '../Components/contactus';
+import Wrkbiceps from '../Components/wrkbiceps';
+import Wrktriceps from '../Components/wrktriceps';
+import Wrklegs from '../Components/wrkleg';
+import AdminLandingPage from '../Components/Trainer  page/Thome';
+import Tlogs from '../Components/Tlogin/trainerlogs';
+import PremiumPlansPage from '../Components/Trainer  page/premiumplan';
+import OphotoGallery from '../Components/bmidiets/oweight';
+import WphotoGallery from '../Components/bmidiets/uweight';
 
 const Navigation = () => {
   return (
@@ -27,12 +32,16 @@ const Navigation = () => {
         <Route path="/wrkchest" element={<Wrkchest />} />
         <Route path="/wrkback" element={<Wrkback />} />
         <Route path="/wrksholder" element={<Wrksholder />} />
-        <Route path="/tlog" element={<Tlogs />} />
-        <Route path="/thome" element={<UserManagement />} />
-        <Route path="/upload-diet-plan/:userId" element={<DietPlanUpload/>} />
         <Route path="/contact" element={<ContactForm/>}/>
-        <Route path="/upload-diet/:userId" element={<DietPlanUpload />} />
+        <Route path="/thome1" element={<AdminLandingPage/>}/>
+        <Route path="/tlog" element={<Tlogs/>}/>
         <Route path="/bmi-calculator" element={<BmiCalculator />} />
+        <Route path="/wrkbiceps" element={<Wrkbiceps/>}/>
+        <Route path="/wrktri" element={<Wrktriceps/>}/>
+        <Route path="/wrkleg" element={<Wrklegs/>}/>
+        <Route path="/upplan" element={<PremiumPlansPage/>}/>
+        <Route path="ov8" element={<OphotoGallery/>}/>
+        <Route path="wv8" element={<WphotoGallery/>}/>
       </Routes>
     </BrowserRouter>
   );

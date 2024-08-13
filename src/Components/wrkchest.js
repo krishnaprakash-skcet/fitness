@@ -5,8 +5,9 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: url('https://images.unsplash.com/photo-1584466977773-e625c37cdd50?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoZXN0JTIwd29ya291dHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+    background: url('');
     background-size: cover;
+    background-color: black;
     color: white;
     font-family: 'Arial', sans-serif;
   }
@@ -24,7 +25,7 @@ const Header = styled.h1`
   text-align: center;
   margin-bottom: 40px;
   font-size: 2.5rem;
-  color: #e0e0e0;
+  color: #fff;
 `;
 
 const WorkoutContainer = styled.div`
@@ -50,7 +51,7 @@ const TargetArea = styled.p`
 const Video = styled.div`
   background-color: #333;
   width: 100%;
-  padding-top: 177.78%; /* 9:16 Aspect Ratio */
+  padding-top: 100.78%; /* 9:16 Aspect Ratio */
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -67,60 +68,83 @@ const Video = styled.div`
   }
 `;
 
+const BackButton = styled.a`
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ffa800; /* Yellow background */
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+
+  &:hover {
+    background-color: ; /* White background on hover */
+    color: white; /* Yellow text on hover */
+  }
+`;
+
 const workouts = [
   {
     title: 'Incline Bench Press',
     target: 'Upper Chest',
-    video: 'https://youtube.com/embed/cq-4gME3IFY?si=WYZW3xOd0xj5mEhS',
+    video: 'https://youtube.com/embed/cq-4gME3IFY',
   },
   {
     title: 'Flat Bench Press',
     target: 'Middle Chest',
-    video: 'https://youtube.com/embed/0cXAp6WhSj4?si=qSFt13HF18m9niDI',
+    video: 'https://youtube.com/embed/0cXAp6WhSj4',
   },
   {
     title: 'Decline Bench Press',
     target: 'Lower Chest',
-    video: 'https://youtube.com/embed/wQIowhVvLKQ?si=P7f0Gj5M3M4-3bur',
+    video: 'https://youtube.com/embed/wQIowhVvLKQ',
   },
   {
     title: 'Cable Crossovers',
     target: 'Inner Chest',
-    video: 'https://youtube.com/embed/tGXIQR89-JE?si=nwRzqYYkj2HJ4rtN',
+    video: 'https://youtube.com/embed/tGXIQR89-JE',
   },
   {
     title: 'Chest Flyes',
     target: 'Whole Chest',
-    video: 'https://youtube.com/embed/g3T7LsEeDWQ?si=-GzLjN9n0AboIeXD',
+    video: 'https://youtube.com/embed/g3T7LsEeDWQ',
   },
   {
     title: 'Push-Ups',
     target: 'Overall Chest',
-    video: 'https://youtube.com/embed/y7PBQ2fYbxY?si=2uml_imRfVLBC2zU',
+    video: 'https://youtube.com/embed/y7PBQ2fYbxY',
   },
 ];
-
-const Wrkchest = () => (
-  <>
-    <GlobalStyle />
-    <Container>
-      <Header>Chest Workouts</Header>
-      {workouts.map((workout, index) => (
-        <WorkoutContainer key={index}>
-          <WorkoutTitle>{workout.title}</WorkoutTitle>
-          <TargetArea>Targets: {workout.target}</TargetArea>
-          <Video>
-            <iframe 
-              src={workout.video} 
-              title={workout.title} 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen 
-            />
-          </Video>
-        </WorkoutContainer>
-      ))}
-    </Container>
-  </>
-);
+/*Various youtube links are used */
+const Wrkchest = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <BackButton href="/wrkout">Back</BackButton> {/* Replace "/" with the URL you want to navigate to */}
+      <Container>
+        <Header>Chest Workouts</Header>
+        {workouts.map((workout, index) => (
+          <WorkoutContainer key={index}>
+            <WorkoutTitle>{workout.title}</WorkoutTitle>
+            <TargetArea>Targets: {workout.target}</TargetArea>
+            <Video>
+              <iframe 
+                src={workout.video} 
+                title={workout.title} 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen 
+                frameBorder="0"
+              />
+            </Video>
+          </WorkoutContainer>
+        ))}
+      </Container>
+    </>
+  );
+};
 
 export default Wrkchest;
